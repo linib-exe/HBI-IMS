@@ -17,12 +17,13 @@ class StockIn(models.Model):
     purchased_by = models.CharField(max_length = 50)
 
     def __str__(self):
-        return models.item
+        return self.item.name
     
 class StockOut(models.Model):
     item = models.ForeignKey(Items,blank=True,default=True,on_delete=models.CASCADE)
     qty = models.IntegerField()
+    out_by = models.CharField(max_length = 50,default= " ")
 
     def __str__(self):
-        return self.name
+        return self.item.name
 

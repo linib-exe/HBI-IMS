@@ -7,7 +7,7 @@ def home(request):
     return HttpResponse("You are in home")
 
 def stockin(request):
-    item = Items.objects.get()
+    pass
 
 def stockout(request):
     pass
